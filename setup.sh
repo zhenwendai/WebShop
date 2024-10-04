@@ -27,6 +27,8 @@ sudo apt install -y openjdk-11-jdk
 # Install Python Dependencies
 pip install -r requirements.txt;
 
+pip install "Werkzeug>=2.2,<3.0"
+
 # Install Environment Dependencies via `conda`
 pip install faiss-cpu;
 
