@@ -21,12 +21,14 @@ if [ -z "$data" ]; then
   helpFunction
 fi
 
+sudo apt update -y
+sudo apt install -y openjdk-11-jdk
+
 # Install Python Dependencies
 pip install -r requirements.txt;
 
 # Install Environment Dependencies via `conda`
-conda install -c pytorch faiss-cpu;
-conda install -c conda-forge openjdk=11;
+pip install faiss-cpu;
 
 # Download dataset into `data` folder via `gdown` command
 mkdir -p data;
