@@ -22,7 +22,7 @@ if [ -z "$data" ]; then
 fi
 
 sudo apt update -y
-sudo apt install -y openjdk-11-jdk
+sudo apt install -y openjdk-11-jdk unzip
 
 # Install Python Dependencies
 pip install -r requirements.txt;
@@ -76,3 +76,8 @@ echo "Downloading 50 example human trajectories..."
 unzip all_trajs.zip
 echo "Downloading example trajectories complete"
 cd ..
+
+cd baseline_models/data
+unzip il_trajs_finalized_images.zip
+cd ../..
+
